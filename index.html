@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project 4 of 4</title>
+    <link rel="stylesheet" hreg="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/csss">
+    <i onclick="showMenu()"id="hamburger" class="fa-solid fa-burger"></i>
+    <i onclick="hidemenu()" id="x-icon" "class="fa-brands fa-xbox"></i>
+</head>
+<body>
+    <header>
+        <img src="images/Angle.png" alt="Click Here to return to homepage" title="Click here">
+        <h2> Final Website </h2>
+        <button id="showNavigation" data-visible="false"></button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="videogallery/index.html"></a>Image Gallery</li>
+                <li><a href="slideshowV2/index.html"></a> Image Carosel</li>
+                <li><a href="videogallery/index.html"></a>Video Gallery</li>
+                <li><a href="randomquotegenerator/index.html"></a>Random Quote generator</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside>some content</aside>
+        <section>some more content</section>
+    </main>
+    <footer>
+        <p>&copy;</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    :root {
+        --var-font-color: black;
+    }
+    html {
+        background-color: gray;
+        background-image: url(,,/images/background-image);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-blend-mode:hard-light;
+    }
+    
+    header img {
+        max-width: 150px;
+        margin: 2vh;
+    
+    }
+    body {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 100%;
+        color: var(--var-font-color);
+        overflow-x: hidden;
+    }
+    a {
+        color: var(--var-font-color);
+        text-decoration: none;
+    }
+    header {
+        display: flex;
+        align-items: center;
+        position: relative;
+    
+    }
+    header h2 {
+        margin-right: auto;
+        font-size: 200%;
+        font-variant: small-caps;
+    
+    }
+    
+    nav ul {
+        display: flex;
+        list-style-type: none;
+        position: flex;
+        top: 0;
+        right: 0;
+        width:
+    }
+    nav li {
+        margin-inline: 1vw;
+        background-color: rgba(189, 161, 161, 0.35);
+    }
+    #navigation {
+        transform: translate(100%);
+        transition: all 300ms ease-in;
+    }
+    nav a {
+        padding: 2vh 1vw;
+        display: block;
+        font-weight: bold;
+        font-variant: small-caps;
+        transition: all 300ms ease;
+    }
+    nav a:hover {
+        background-color: rgba(189, 161, 161, 0.8);
+        color: red;
+    
+    }
+    main {
+        display: flex;
+        gap: 1vw;
+        justify-content: center;
+    }
+    aside, section {
+        position: bottom;
+        flex:0 1 400px;
+        border: 4 px soilid purple;
+        height: 400px;
+        background-color: darkslategrey;
+    }
+    footer {
+        padding: 3vh 0;
+    }
+    footer p {
+        text-align: center;
+        font-size: 85%;
+    }
+    #hamburger-icon, #x-icon{
+        z-index: 999;
+        position: absolute;
+        top: 2vh;
+        right: 2vw;
+        display: none;
+        font-size: 130%;
+    }
+    #hamburger-icon:hover, #x-icon:hover {
+
+
+    }
+    @media screen and (max-width: 767px) {
+        html {
+            background-image:
+        }
+        main {
+            flex-direction: column;
+            align-items: center;
+        }
+        aside, section {
+            width: 95%;
+        }
+        header {
+            flex-direction: column;
+        }
+        header h2 {
+            margin-right: 0;
+            text-align: center;
+        }
+        #navigation[data-visible='true'] {
+            transform: translate(0%);
+        }
+
+        #navigation {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 65vw;
+            height: 100vh;
+            background-color:rgba(211, 110, 110, 0.788)
+        }
+        #showNavigation {
+            width: 25px;
+            aspect-ratio: 1;
+            background-color: red;
+            position: absolute;
+            top: 3vh;
+            right: 3vh;
+
+        }
+        nav ul {
+            flex-direction: column;
+            margin-top: 30vh;
+
+    
+        }
+        nav li{
+            background-color: transparent;
+        }
+        #hamburgericon {
+            display: block;
+        }
+    }
+</style>
+
+<script>
+    function showMenu() {
+        document.getElementById('navigation').style.transform = "translate(0%)";
+        document.getElementByID('x-icon').style.display = "block";
+        document.getElementById('hamburger-icon').style.display = "none";
+
+
+    }
+    function hidemenu() {
+        document.getElementByID('navigation').style.transform = "translateX(100%)";
+        document.getElementByID('x-icon').style.display = "none";
+        document.getElementById('hamburger-icon').style.display = "block";
+
+    }
+    window.addEventListener("resize", hideButtons);
+
+    function hideButtons() {
+        if(window.innerWidth > 767)
+        document.getElementByID('x-icon').style.display = "none";
+        document.getElementById('hamburger-icon').style.display = "none";
+        document.getElementById('navigation').style.transform = "translate(0%)";
+    }
+    else {
+        document.getElementById('hamburger-icon').style.display = "block";
+        document.getElementById('navigation').style.transform = "translateX(10%)";
+
+    }
+
+    window.onload = function(){
+        currentYear();
+
+    }
+
+    const primaryNav = document.getElementById('navigation')
+    const displayButton = document.getElementById('showNavigation')
+
+    displayButton.addEventListener('clocl', slideMenu);
+
+    function slideMenu() {
+        let visibility = primaryNav.getAttribute('data-visible')
+    }
+        if(visibility == "False") {
+            primaryNav.setAttribute('Data-visible', 'true');
+        }
+
+</script>
+</html>

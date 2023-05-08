@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide show</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+</head>
+<body>
+    <header>
+        <img src="images/logoimage.jpg" alt="Logo_iamge">
+        <h2> Car slide show</h2>
+    </header>
+  
+<div class="container">
+    <div class="swiper">
+
+     <div class="swiper-wrapper">
+
+      <div class="swiper-slide"><img src="images/aston-martin.jpg"></div>
+      <div class="swiper-slide"><img src="images/audi-rs-e-tron-gt.jpg"></div>
+      <div class="swiper-slide"><img src="images/maserati-mc20.jpg"></div>
+      <div class="swiper-slide"><img src="images/nio-et5.jpg"></div>
+
+     </div>
+ 
+     <div class="swiper-pagination"></div>
+  
+     <div class="swiper-button-prev"></div>
+     <div class="swiper-button-next"></div>
+   </div>
+</div>
+
+<footer> 
+    <p>&copy;<span id="m_copyright"></span>Olijah Williams</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        loop: true,
+      
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      
+      });
+
+</script>
+</body>
+
+
+
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    header {
+        display: flex;
+        align-items: center;
+        border-bottom: 3px ridge black;
+        background-color: purple;
+    }
+    header img {
+        margin: 2vh;
+        border-radius: 50%;
+    }
+    header h2{
+        font-size: 300%;
+    }
+    footer {
+        padding: 2vh;
+        border-top: 3px ridge green;
+        background-color: purple;
+    }
+    
+    footer p {
+        font-size: 85%;
+        font-variant: small-caps;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .container {
+        width: 100;
+        height: 100vh;
+        background: #222;
+        display: flex;
+     
+    }
+    .swiper {
+        width: 80%;
+        height: fit-content;
+        
+    }
+    .swiper-slide img{
+        width: 100%;
+    }
+
+    .swiper .swiper-botton-prev, .swiper-botton-next {
+       color: purple;
+
+    }
+    .swiper .swiper-pagination-bullet-active {
+        background: gold;
+    }
+
+    
+
+
+    
+</style>
+
+</html>

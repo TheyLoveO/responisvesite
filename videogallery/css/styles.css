@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bebas Neue', cursive;
+    background-image: conic-gradient(from 90deg at 50% 0%, #111, 50%, #222, #111);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: purple;
+    
+}
+
+header {
+    display:flex;
+    align-items: center;
+    border-bottom: purple;
+    margin-bottom: 3vh;
+
+}
+
+header, footer {
+    width: 100%;
+}
+
+header h2 {
+    font-size: 250%;
+}
+
+nav{
+    flex: 0 1 300px;
+}
+
+nav a {
+    font-weight: bold;
+    font-size: 120%;
+    text-decoration: none;
+    padding: 2vh;
+    background-color: purple;
+    border-radius: 5px;
+    display: block;
+
+}
+
+nav a:link, nav a:visited {
+    cursor: whitesmoke;
+    color: red;
+    text-decoration: underline;
+}
+
+nav a:hover {
+    cursor: pointer;
+    background-color: white;
+}
+
+nav li {
+    width: 80%;
+    border: 1px solid purple;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+nav ul {
+    list-style-type: none;
+    position: sticky;
+    top: 100px;
+}
+main{
+    flex-wrap: 0 1 600px;
+}
+
+
+header img{
+    max-width: 200px;
+    margin: 2vh;
+}
+
+article {
+    padding: 4vh 2vh;
+    background-color: black;
+    margin-bottom: 2vh;
+    border: 1px solid blue;
+
+}
+
+
+.videowrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+    margin: 0 auto;
+    border: 6px ridge #808080;
+    box-shadow: 5px 5px 15px 10px red;
+    background-color: black;
+}
+.videowrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.caption {
+    margin: 2vh 0;
+}
+
+#cornerBtn {
+    display: none; 
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid red;
+    background-color: purple;
+    font-size: 110%;
+    transition: all 300ms;
+
+}
+#cornerBtn:hover {
+    background-color: magenta;
+    color: red;
+    padding: 15px;
+}
+
+footer {
+    padding: 3vh 0;
+}
+
+footer p {
+    font-size: 80%;
+    text-align: center;
+    font-variant: small-caps;
+    color: azure;
+
+}

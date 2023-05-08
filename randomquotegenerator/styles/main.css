@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 100%;
+    min-height: 100vh;
+    border: 1px solid purple;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+html {
+    background-color: gray;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+
+}
+.container {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    text-align: center;
+    background-color: mediumslateblue;
+    color: black;
+}
+
+#quotation {
+    font-style: italic;
+}
+
+button {
+    background-color: purple;
+     
+}
+
+title {
+    Color: purple;
+    background-color: white;
+}
